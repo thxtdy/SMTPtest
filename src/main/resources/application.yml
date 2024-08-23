@@ -1,0 +1,32 @@
+server:
+  port: 8080 # Port Number
+  servlet:
+    encoding:
+      charset: utf-8 # Servlet의 응답과 요청 인코딩을 UTF-8로 설정
+      force: true # 요청과 응답에 대해 이 인코딩을 강제로 사용하도록 설정
+
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/ # JSP 파일이 위치한 디렉토리 접두사를 설정
+      suffix: .jsp # 뷰 이름에 자동으로 추가될 파일 확장자를 설정
+  servlet:
+    multipart:
+      max-file-size: 20MB # 파일 최대 크기 20MB
+      max-request-size: 20MB # MultiPart 전체 요청 크기 20MB 제한
+  mail:
+    host: smtp.gmail.com # SMTP ?? ???
+    port: 587 # SMTP ?? ??(Google = 587)
+    username: thjjang04@gmail.com
+    password: fthg iybr dtnl euge
+    # username: ${mail.username} # SMTP ?? ??? ??? = ???
+    # password: ${mail.password} # SMTP ?? ??? ???? = ? ????
+    # ${} ? yml ??? ????? ???? ??? ????
+    # ????? ?????? mail.username = ??; mail.password = ?? ? ??? ?
+    properties:
+      mail:
+        smtp:
+          auth: true # ??? ?? ?? ??
+          timeout: 5000 # Socket Read Timeout (5?)
+          starttls:
+            enable: true # StartTLS ??? ??
