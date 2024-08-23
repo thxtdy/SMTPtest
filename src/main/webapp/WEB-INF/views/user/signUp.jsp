@@ -89,7 +89,7 @@ $(".custom-file-input").on("change", function() {
  function fetchData() {
 	fetch('http://localhost:8080/send-mail/email/{email}')
 	.then(data1=> {
-		return data1;
+		return data1.json();
 	})
 	.then(data2=> {
 		console.log(data2);
