@@ -9,7 +9,10 @@ public class UserController {
 	
 	@GetMapping("sign-up")
 	public String signUpPage( ) {
-		return "/user/signUp";
+		return "user/signUp";
 	}
-	
+    @GetMapping("/password")
+    public String sendPasswordMail() {
+       return "user/";
+    }
 }
